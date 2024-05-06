@@ -1,0 +1,15 @@
+﻿@{ ViewBag.Title = "Test 3"; }
+<h2>@ViewBag.Title.</h2>
+
+@using (Html.BeginForm("Test3", "Home", FormMethod.Post))
+{
+    <label for="code">Enter Code:</label>
+    <input type="text" id="code" name="code" required />
+    <button type="submit">Get Margin</button>
+}
+
+@if (ViewBag.Margin != null)
+{
+<div>
+    Margin: @ViewBag.Margin
+</div>}
